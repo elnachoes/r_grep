@@ -8,8 +8,7 @@ fn get_arguments() -> (String , String) {
 
 fn search_file() -> Vec<String> {
     let (string, file_path) = get_arguments();
-    fs::read_to_string
-        (file_path)
+    fs::read_to_string(file_path)
         .expect("could not read file")
         .as_str()
         .split("\n")
